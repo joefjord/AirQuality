@@ -8,4 +8,4 @@ Application to allow the public to view high resolution, local air quality data 
 <h3> CSS Status: <span style="color:red">Not Started</span></h3>
 <h3> AeroQual Uplink: <span style="color:red">Not Started</span></h3>
 <h3> Data Presentation: <span style="color:red">Not Started</span></h3>
-<h3> Educaitonal Portion: <span style="color:red">Not Started</span></h3>
+<h3> Educational Portion: <span style="color:red">Not Started</span></h3>
