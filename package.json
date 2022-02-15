@@ -1,0 +1,23 @@
+{
+  "name": "airquality",
+  "version": "1.0.0",
+  "description": "Application to allow the public to view high resolution, local air quality data and be alerted to high concentrations of dangerous particulate matter.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joefjord/AirQuality.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joefjord/AirQuality/issues"
+  },
+  "homepage": "https://github.com/joefjord/AirQuality#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
