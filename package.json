@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/joefjord/AirQuality#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "fontawesome": "^5.6.3",
+    "jquery": "^3.6.0",
     "nodemon": "^2.0.15"
   }
 }
