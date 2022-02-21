@@ -24,19 +24,29 @@ app.get("/about-us", (req, res) => {
     res.render('about')
 });
 
-//Statistics Page
+//FAQ Page
+app.get("/faq", (req, res) => {
+    res.render('faq')
+});
+
+// Current Statistics Page
 app.get("/statistics", (req, res) => {
     res.render('statistics')
 });
 
-//Affects Page
+//How PM2.5 Affects You Page
 app.get("/affects", (req, res) => {
     res.render('affects')
 });
 
-//PM2.5 Page
+//What PM2.5 Are Page
 app.get("/pm25", (req, res) => {
     res.render('pm25')
+});
+
+//Where PM2.5 Come From Page
+app.get("/where", (req, res) => {
+    res.render('where')
 });
 
 //Leaf Burn Calculator Page
