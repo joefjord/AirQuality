@@ -2,6 +2,7 @@
 
 const app = require("./app");
 const PORT = 8000;
+const { db } = require("./Database/dbModel");
 
 //This are declarations for the app.listen
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
