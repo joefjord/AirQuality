@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Forecast - Breath Fresh</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<pre id="refinedData" style="display: none;"><%= JSON.stringify(refinedData) %> </pre>
+<body style="background-color: whitesmoke">
+    <%- include('partials/header.html') %>
+    <div class="hero text-black py-5 px-4 flex-grow-1">
+        <h1 top-margin="10px">Local Readout - Jonesboro</h1>
+        <div height="300px" width="100px">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <%- include('partials/footer.html') %>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="js/graphChart.js"></script>
+</html>

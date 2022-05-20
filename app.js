@@ -3,6 +3,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const { dbModel } = require("./Database/dbModel.js");
 
 app.set('view engine', 'ejs');
 app.use(express.json());
@@ -54,9 +55,23 @@ app.get("/leafburn", (req, res) => {
     res.render('leafburn')
 });
 
-//Learn more Calculator Page
+//Learn more Page
 app.get("/learn-more", (req, res) => {
     res.render('learnmore')
+});
+
+//Graph Page
+app.get("/graph", (req, res) => {
+    const bigData = dbModel.getAirData_5Hour()
+
+    let refinedData = [];
+    for (let i = 0 ; i < bigData.length; i++)
+    {
+        refinedData.push({x: bigData[i].datetime, y: bigData[i].PM25});
+    }
+    //console.log(refinedData)
+
+    res.render('graph', {refinedData})
 });
 
 module.exports = app;

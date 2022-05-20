@@ -1,3 +1,12 @@
+/**
+ * @file    grab.js
+ * @brief   Retrieves the most recent file within the qualitySheets directory and
+ *          parses it into the database.
+ *
+ * @author  Dillon Boatman
+ * @date    04/08/2022
+ */
+
 const glob = require('glob');
 const fs = require('fs');
 const { dbModel } = require('./Database/dbModel.js');
@@ -23,12 +32,17 @@ const SKIPLINES = 7;
 
 // line[n] = [NO2ppb, 03ppb, PM2.5, TEMPc, RH, DPc, Inlet, Date, time ]
 // It requires this formatting (data.csv) for pulling data
+
 let sensor = lines[0].split(' · ')[1].split('(')[0];
+
 for(let i = SKIPLINES; i < lines.length; i++){
+    
     let line = lines[i].split(',');
-    let time = line.shift().split(' ');
-    line.push(time[0]);
-    line.push(time[1]);
+    let datetime = line.shift();//.split(' ');
+    // line.push(time[0]);
+    // line.push(time[1]);
+    line.push(datetime)
     line.push(sensor);
     dbModel.insertAirData(line);
+    console.log(line)
 }

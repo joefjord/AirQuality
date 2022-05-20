@@ -7,9 +7,15 @@
     <title>Affects of PM2.5 - Breath Fresh</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<body style="background-color: grey">
+<body style="background-color: whitesmoke; min-height: 100%;">
     <%- include('partials/header.html') %>
-    <h1>This is the Affects Page</h1>
-    <%- include('partials/footer.html') %>
+    <div class="hero text-black py-5 px-4 flex-grow-1">
+        <h1 class="text-black">How PM 2.5 particulate affects you:</h1>
+    
+        <p class="text-black">
+            Particles in the PM 2.5 size range are able to travel deep into the respiratory tract, reaching the lungs. Exposure to fine particulate can cause short-term health effects such as eye, nose, throat, and lung irritation, as well as coughing, sneezing, runny nose, and shortness of breath.
+        </p>
+    </div>
+    <%- include('partials/footer_short.html') %>
 </body>
 </html>
