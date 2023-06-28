@@ -27,3 +27,7 @@ The data presentation is done by using a node_module called `ChartJS`. This allo
 About every hour the server will recieve an FTP push from Aeroqual (assuming that the sensors are functioning). This push will contain a CSV file containing the previous hour's worth of data. If the sensors go down of the FTP push fails, the push will not complete. However once a push is sucessful, that push's CSV file will contain all of the data that would have been transmitted (if it was recorded) in the meantime.
 Then, the `grab.js` file will automatically check every hour (assuming the CRON job is set up correctly) for a new CSV file, and will then retrieve the data and insert it into the database.
 Finally, once the page containing the data graph is loaded, the server will pull the previous 5 hours worth of data, and then graph it using ChartJS.
+
+# UI
+<a href="https://xd.adobe.com/view/917ea09d-5f70-4792-bc36-fe027d7f49e4-c42d/?fullscreen" target="_blank">Adobe XD prototype (external link)</a><br><br>
+<img width="500" alt="BreatheEasy-thumb" src="https://github.com/joefjord/AirQuality/assets/20195415/c199d1d4-9086-4642-88b9-4887ec519f81">
