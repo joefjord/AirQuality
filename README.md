@@ -6,7 +6,7 @@ Application to allow the public to view high resolution, local air quality data 
 # The Software Stack
 This project is broken into three main portions from our initial development perspective. Frontend, Backend, Data Presentation, and Database.
 ### Frontend
-Our frontend is built off of Bootstrap, as it allowed for simple and stlyish templates for use in our headers, footers, and bodies. These elements are very easy to look at and change if needed. Overall the front-end bootstrap elements are not crucial to the functioning of this application and can be easily changed and removed in the future. Overall we utilized EJS to make the application templated internally. This way we only needed one header and a couple footers. All EJS files are stored in the `views` folder.
+Our frontend is built off of Bootstrap, as it allowed for simple and stylish templates for use in our headers, footers, and bodies. These elements are easily edited, if needed. Overall the front-end bootstrap elements are not crucial to the functioning of this application and can be easily changed and removed in the future. Overall we utilized EJS to make the application templated internally. This way we only needed one header and a couple footers. All EJS files are stored in the `views` folder.
 The `public` folder, as standard, contains our CSS and JS files.
 ### Backend
 The backend of this project is built on NodeJS. This is pretty standard for most web applications and we attempted to use code that was pretty textbook to avoid confusion in the future.
@@ -21,7 +21,7 @@ Here is a brief for each file:
 -- `dbModel.js` contains the functions that allow for pulling data from and inserting data into the DB.
 -- `schema.sql` contains the sql layout of the db
 ### Data Presentation.
-The data presentation is done by using a node_module called `ChartJS`. This allows us to generate charts depicting data on page-load rather than generating charts as images and then loading them. The benefit of this is that less storage space is used to store chart images, and also the charts are now interactable. The code for this is contained in the `app.js` file as well as the `chartGraph.js` file in the public folder. 
+The data presentation is accomplished using a node_module called `ChartJS`. This allows us to generate charts depicting data on page-load rather than generating charts as images and then loading them. The benefit of this is that less storage space is used to store chart images, and also the charts are now interactable. The code for this is contained in the `app.js` file as well as the `chartGraph.js` file in the public folder. 
 
 ## Basic Overview
 About every hour the server will recieve an FTP push from Aeroqual (assuming that the sensors are functioning). This push will contain a CSV file containing the previous hour's worth of data. If the sensors go down of the FTP push fails, the push will not complete. However once a push is sucessful, that push's CSV file will contain all of the data that would have been transmitted (if it was recorded) in the meantime.
